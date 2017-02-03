@@ -90,7 +90,7 @@ const CodeMirror = React.createClass({
 		this.props.onScroll && this.props.onScroll(cm.getScrollInfo());
 	},
 	codemirrorValueChanged (doc, change) {
-		if (this.props.onChange && change.origin !== 'setValue') {
+		if (this.props.onChange) {
 			this.props.onChange(doc.getValue(), change);
 		}
 	},
